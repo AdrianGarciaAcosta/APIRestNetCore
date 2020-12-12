@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>APIRestNetCore</name>
+    </assembly>
+    <members>
+        <member name="M:APIRestNetCore.Controllers.BookController.Get">
+            <summary>
+            Obtención de los libros de la biblioteca
+            </summary>
+            <returns>Listado de libros</returns>
+            <response code="200">Obtención correcta de los libros</response>
+        </member>
+        <member name="M:APIRestNetCore.Controllers.BookController.Get(System.Int32)">
+            <summary>
+            Obtención de un libro concreto
+            </summary>
+            <param name="id">Identificador del libro que queremos obtener</param>
+            <returns>Libro que coincide con la busqueda</returns>
+            <response code="200">Obtención correcta de un libro</response>
+            <response code="404">Libro no encontrado</response>
+        </member>
+        <member name="M:APIRestNetCore.Controllers.BookController.Post(APIRestNetCore.Models.Book)">
+            <summary>
+            Creación de un nuevo libro, lo añade a la biblioteca
+            </summary>
+            <param name="bookModel">Datos del libro a crear</param>
+            <returns></returns>
+            <response code="200">Creación correcta de un libro</response>
+        </member>
+        <member name="M:APIRestNetCore.Controllers.BookController.Put(System.Int32,APIRestNetCore.Models.Book)">
+            <summary>
+            Actualización de un libro de la biblioteca
+            </summary>
+            <param name="id">Identificador del libro que queremos modificar</param>
+            <param name="bookModel">Datos del libro a modificar</param>
+            <returns></returns>
+            <response code="200">Actualización correcta de un libro</response>
+            <response code="400">Parametros de entrada incorrectos</response>
+            <response code="404">Libro no encontrado</response>
+        </member>
+        <member name="M:APIRestNetCore.Controllers.BookController.Delete(System.Int32)">
+            <summary>
+            Borrado de un libro de la biblioteca
+            </summary>
+            <param name="id">Identificador del libro a borrar</param>
+            <returns></returns>
+            <response code="200">Borrado de un libro</response>
+            <response code="404">Libro no encontrado</response>
+        </member>
+    </members>
+</doc>
